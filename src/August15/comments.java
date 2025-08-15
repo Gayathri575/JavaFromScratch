@@ -2,7 +2,7 @@ package August15;
 //Single line comments
 
 /* multi
-line 
+line
 comments
  */
 public class comments {
