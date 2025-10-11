@@ -11,7 +11,7 @@ class Animal {
         }
 
         public void fetches() {
-            System.out.println("Dof=g fetches the ball");
+            System.out.println("Dog fetches the ball");
         }
         @Override
         public void MakeSound() {
