@@ -57,21 +57,21 @@ public class ExplicitDowncasting {
 
         // c1 → Designer check
         if (c1 instanceof Designer) {
-            Designer d1 = (Designer) c1; // safe downcasting
-            c1.work();      // calls overridden method
-            d1.Adobe();     // child-only method
+            Designer d1 = (Designer) c1;
+            c1.work();
+            d1.Adobe();
         }
 
         // c2 → Developer check
         if (c2 instanceof Developer) {
-            Developer d2 = (Developer) c2; // safe downcasting
+            Developer d2 = (Developer) c2;
             c2.work();
             d2.CodeEditor();
         }
 
         // c3 → Testing check
         if (c3 instanceof Testing) {
-            Testing t1 = (Testing) c3; // safe downcasting
+            Testing t1 = (Testing) c3;
             c3.work();
             t1.Maven();
         }
