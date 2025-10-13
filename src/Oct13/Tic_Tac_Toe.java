@@ -74,4 +74,50 @@ public class Tic_Tac_Toe{
         System.out.println("|---|---|---|");
     }
 
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        board = new String[9];
+        turn = "X";
+        String winner = null;
+
+        for (int a = 0; a < 9; a++) {
+            board[a] = String.valueOf(a + 1);
+        }
+
+        System.out.println("Welcome to 3x3 Tic Tac Toe.");
+        printBoard();
+        System.out.println("X will play first. Enter a slot number to place X in:");
+
+        while (winner == null) {
+            int numInput;
+
+            try {
+                numInput = in.nextInt();
+
+                // Check range
+                if (!(numInput > 0 && numInput <= 9)) {
+                    System.out.println("Invalid input; re-enter slot number:");
+                    continue;
+                }
+
+                // Check if slot is available
+                if (board[numInput - 1].equals(String.valueOf(numInput))) {
+                    board[numInput - 1] = turn;
+
+                    // Toggle turn
+                    turn = turn.equals("X") ? "O" : "X";
+
+                    printBoard();
+                    winner = checkWinner();
+                } else {
+                    System.out.println("Slot already taken; re-enter slot number:");
+                }
+
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input; re-enter slot number:");
+                in.nextLine(); // Consume invalid input to prevent infinite loop
+            }
+        }
+
+    }
 }
