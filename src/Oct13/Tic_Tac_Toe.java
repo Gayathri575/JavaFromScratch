@@ -2,9 +2,9 @@ package Oct13;
 // A simple Java program to demonstrate
 // Tic-Tac-Toe Game
 import java.util.*;
-
+// class declare
 public class Tic_Tac_Toe{
-
+// instance variable
     static String[] board;
     static String turn;
 
@@ -12,7 +12,7 @@ public class Tic_Tac_Toe{
     static String checkWinner() {
         for (int a = 0; a < 8; a++) {
             String line = null;
-
+            // using switch case
             switch (a) {
                 case 0:
                     line = board[0] + board[1] + board[2];
@@ -73,7 +73,7 @@ public class Tic_Tac_Toe{
         System.out.println("| " + board[6] + " | " + board[7] + " | " + board[8] + " |");
         System.out.println("|---|---|---|");
     }
-
+// main method
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         board = new String[9];
