@@ -1,35 +1,35 @@
 package Oct19;
+// class
+class good {
+    //instance variable
+    int age;
+    String name;
 
-class Student {
-    public int roll_no;
-    public String name;
-
-    Student(int roll_no, String name){
-        this.roll_no = roll_no;
+    // constructor
+    good(int age , String name ){
+        this.age = age;
         this.name = name;
     }
 }
+//class
+public class ObjectArray{
+    // main method
+    public static void main(String [] args){
+        // declare arrays
+        good [] Arrays ;
+        // allocate memory
+        Arrays = new good[5];
+        // initialize values
+        Arrays[0] = new good(1, "aman");
+        Arrays[1] = new good(2, "vaibhav");
+        Arrays[2] = new good(3, "shikar");
+        Arrays[3] = new good(4, "dharmesh");
+        Arrays[4] = new good(5, "mohit");
 
-public class ObjectArray {
-    public static void main(String[] args){
+        // accesing
+        for(int i = 0 ; i < Arrays.length ; i ++){
+            System.out.println( Arrays[i].name + " " +Arrays[i].age +" ");
+        }
 
-        // declares an Array of Student
-        Student[] arr;
-
-        // allocating memory for 5 objects of type Student.
-        arr = new Student[5];
-
-        // initialize the elements of the array
-        arr[0] = new Student(1, "aman");
-        arr[1] = new Student(2, "vaibhav");
-        arr[2] = new Student(3, "shikar");
-        arr[3] = new Student(4, "dharmesh");
-        arr[4] = new Student(5, "mohit");
-
-        // accessing the elements of the specified array
-        for (int i = 0; i < arr.length; i++)
-            System.out.println("Element at " + i + " : { "
-                    + arr[i].roll_no + " "
-                    + arr[i].name+" }");
     }
 }
